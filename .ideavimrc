@@ -1,0 +1,67 @@
+" .ideavimrc is a configuration file for IdeaVim plugin. It uses
+"   the same commands as the original .vimrc configuration.
+" You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Custom settings
+let mapleader=" "
+
+" Enable auto completion menu after pressing TAB.
+"set wildmenu
+" Make wildmenu behave like similar to Bash completion.
+"set wildmode=list:longest
+
+set scrolloff=10
+set relativenumber
+set number
+set clipboard+=unnamed
+set clipboard+=ideaput
+
+map <leader>bp <Action>(ToggleLineBreakpoint)
+map <leader>hu <Action>(HighlightUsagesInFile)
+map <leader>gu <Action>(ShowUsages)
+map <leader>gi <Action>(GotoImplementation)
+map <leader>t <Action>(ActivateTerminalToolWindow)
+map <leader>p <Action>(ActivateProjectToolWindow)
+map <leader>h <Action>(QuickJavaDoc)
+map zen <Action>(ToggleZenMode)
+map <C-w>n :split<Enter>
+
+map <leader>gcm <Action>(ActivateCommitToolWindow)
+map <leader>gps :!git push
+map <leader>gfc :!git fetch<Enter>
+map <leader>gpl :!git pull<Enter>
+
+map <leader>r <Action>(Run)
+map <leader>d <Action>(Debug)
+
+" Rarely used but for controlling .ideavimrc
+map ;e :e ~/.ideavimrc<Enter>
+map ;s :source ~/.ideavimrc<Enter>
