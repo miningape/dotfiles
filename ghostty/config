@@ -1,0 +1,12 @@
+# Ghostty Config: ~/.config/ghostty/config - https://ghostty.org/docs/config
+
+# Turn off ligatures
+font-feature = -calt
+font-feature = -liga
+font-feature = -dlig
+
+# Make it beautiful
+font-family = MesloLGS Nerd Font Mono
+font-size = 11
+background-opacity = 0.95
+theme = Cobalt2 
