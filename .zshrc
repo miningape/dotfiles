@@ -7,6 +7,11 @@
 alias neofetch="echo '' && fastfetch && echo ''"
 neofetch
 
+# Make it so we run neofetch every time we clear 
+alias clear="clear && neofetch"
+
+# Make it so nvim is the default
+alias vim="nvim"
 
 # fzf settings
 source <(fzf --zsh) # allow completions with ctrl + t
